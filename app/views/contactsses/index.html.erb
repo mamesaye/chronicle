@@ -1,0 +1,24 @@
+<h1>Listing contactsses</h1>
+
+<table>
+  <tr>
+    <th>Names</th>
+    <th>Emails</th>
+    <th>Ages</th>
+  </tr>
+
+<% @contactsses.each do |contactss| %>
+  <tr>
+    <td><%=h contactss.names %></td>
+    <td><%=h contactss.emails %></td>
+    <td><%=h contactss.ages %></td>
+    <td><%= link_to 'Show', contactss %></td>
+    <td><%= link_to 'Edit', edit_contactss_path(contactss) %></td>
+    <td><%= link_to 'Destroy', contactss, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New contactss', new_contactss_path %>

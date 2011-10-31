@@ -1,0 +1,24 @@
+<h1>Editing contactss</h1>
+
+<% form_for(@contactss) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :names %><br />
+    <%= f.text_field :names %>
+  </p>
+  <p>
+    <%= f.label :emails %><br />
+    <%= f.text_field :emails %>
+  </p>
+  <p>
+    <%= f.label :ages %><br />
+    <%= f.text_field :ages %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @contactss %> |
+<%= link_to 'Back', contactsses_path %>
